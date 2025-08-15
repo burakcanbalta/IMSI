@@ -80,7 +80,7 @@ Türkiye’de 2022’de MIT tarafından çökertilen organize çete, yargı mens
 
 ##  Yapısal ve Görsel Geliştirmeler
 
-### IMSI Catcher Sinyal Manipülasyonu ve KEC Veri Akışı
+### IMSI Catcher Sinyal Manipülasyonu
 
 ```
 Gerçek Baz İstasyonu  --->  RF Sinyal Bastırma
