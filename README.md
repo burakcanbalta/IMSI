@@ -92,9 +92,6 @@ Gerçek Baz İstasyonu  --->  RF Sinyal Bastırma
                    IMSI ve Konum Toplama
                            |
                            v
-                        KEC Cihazı
-                           |
-                           v
                     Merkezi Veri Sunucusu
 ```
 ![baba](https://github.com/user-attachments/assets/12fd6940-0e30-4ee0-91f8-3a00eb6ab540)
