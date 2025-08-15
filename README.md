@@ -108,9 +108,6 @@ grsgem_scanner -b GSM900 -v
 grsm_livemon -f 942.6M -g 40 -v
 ```
 
-- **Dekodlama ve Analiz:** Airprobe ile FCCH, SCH, BCCH analizi; IMSI-Catcher Detector ile sahte MCC/MNC tespiti.
-
----
 ## Tespit ve Savunma Mekanizmaları
 
 ### Pasif Tespit
