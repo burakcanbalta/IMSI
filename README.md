@@ -113,18 +113,6 @@ grsm_livemon -f 942.6M -g 40 -v
 <img width="700" height="315" alt="Ber_bsc_rmg" src="https://github.com/user-attachments/assets/81d5a2c9-de34-4507-a2b9-fc86aab04ce8" />
 
 ---
-
-## Teknik Detayları Derinleştirme
-
-### Baseband İşlemci Açıkları ve APDU Exploit Mantığı
-
-- Qualcomm & MediaTek CVE Detayları: CVE-2018-11279 ve benzer backdoor’lar
-- APDU Komut Setleri: KEC cihazları ile IMSI sızdırma adımları
-- Exploit Zinciri: SDR sinyal bastırma → downgrade → IMSI sızdırma → KEC cihazı → merkezi sunucu
-
-*Görsel Yer Tutucu:* `Baseband_APDU_Flow.png`
-
-
 ## Tespit ve Savunma Mekanizmaları
 
 ### Pasif Tespit
