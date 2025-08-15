@@ -110,8 +110,6 @@ grsm_livemon -f 942.6M -g 40 -v
 
 - **Dekodlama ve Analiz:** Airprobe ile FCCH, SCH, BCCH analizi; IMSI-Catcher Detector ile sahte MCC/MNC tespiti.
 
-<img width="700" height="315" alt="Ber_bsc_rmg" src="https://github.com/user-attachments/assets/81d5a2c9-de34-4507-a2b9-fc86aab04ce8" />
-
 ---
 ## Tespit ve Savunma Mekanizmaları
 
