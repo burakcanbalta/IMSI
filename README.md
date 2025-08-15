@@ -1,4 +1,3 @@
-![facebas](https://github.com/user-attachments/assets/8dc667f3-982c-4392-9d5a-7a9a49a0137f)
 # IMSI Catcher’lar ve Türkiye’de RF Tabanlı Güvenlik Açıkları: MIT Çetesinin Çöküşü ve Operasyonel Detaylar
 
 ## Özet / Abstract
@@ -31,9 +30,9 @@ Türkiye’de 2022’de MIT tarafından çökertilen organize çete, yargı mens
 - IMSI catcher’lar RFC 3588 (AAA) ve GSM/LTE kimlik doğrulama protokollerini manipüle eder.
 - Türkiye’deki MIT çetesi, **KEC cihazları üzerinden APDU komutlarını** kullanarak IMSI bilgisini sızdırmıştır.
 
-*Görsel önerisi:* `Baseband_APDU_Flow.png` — Baseband işlemci + APDU veri akışı şeması.
+![abdu1](https://github.com/user-attachments/assets/f9886f19-09d3-49cd-a481-439e29890001)
 
----
+![abdu](https://github.com/user-attachments/assets/2d25a581-2a59-4436-a824-0208ce4cf806)
 
 ## 3. Türkiye’de RF Güvenlik Mitlerinin Çöküşü
 
@@ -63,8 +62,6 @@ Türkiye’de 2022’de MIT tarafından çökertilen organize çete, yargı mens
 2. **IMSI Catcher:** Sahte baz istasyonu ile cihazları zorla bağlatma.
 3. **RF Spektrum Analizi:** SDR ile gerçek zamanlı RF tarama.
 
-*Görsel önerisi:* `MIT_Cete_Operasyon_Akış.png`
-
 ### 4.2 Kullanılan Açıklar
 
 - TS 13583 acil durum modu kötüye kullanımı.
@@ -79,7 +76,8 @@ Türkiye’de 2022’de MIT tarafından çökertilen organize çete, yargı mens
 4. KEC cihazlarından APDU komutları ile veri sızıntısı
 5. Elde edilen verilerin merkezi sunucuda toplanması
 
----
+![thumbs_b_c_aeaa0a54d65dee1611ad55bb0be3fd67](https://github.com/user-attachments/assets/26b35600-1fc2-433c-b2cb-bae67dbae2d8)
+
 
 ## 5. Yapısal ve Görsel Geliştirmeler
 
@@ -100,8 +98,9 @@ Gerçek Baz İstasyonu  --->  RF Sinyal Bastırma
                            v
                     Merkezi Veri Sunucusu
 ```
+![baba](https://github.com/user-attachments/assets/12fd6940-0e30-4ee0-91f8-3a00eb6ab540)
 
-*Görsel Yer Tutucu:* `IMSI_Catcher_KEC_Akış.png`
+![ana](https://github.com/user-attachments/assets/f43c7624-cf0b-4539-b771-c7a527143618)
 
 ### 5.2 SDR Laboratuvar Simülasyonu
 
@@ -115,7 +114,7 @@ grsm_livemon -f 942.6M -g 40 -v
 
 - **Dekodlama ve Analiz:** Airprobe ile FCCH, SCH, BCCH analizi; IMSI-Catcher Detector ile sahte MCC/MNC tespiti.
 
-*Görsel Yer Tutucu:* `SDR_Lab_Simülasyonu.png`
+<img width="700" height="315" alt="Ber_bsc_rmg" src="https://github.com/user-attachments/assets/81d5a2c9-de34-4507-a2b9-fc86aab04ce8" />
 
 ---
 
@@ -134,7 +133,6 @@ grsm_livemon -f 942.6M -g 40 -v
 - 2G/3G downgrade senaryoları ile A5/1 ve A5/2 şifreleme bypass adımları
 - Gerçek RF parametreleri ile örnek sinyal analizleri
 
-*Görsel Yer Tutucu:* `Downgrade_Scenario.png`
 
 ### 6.3 KEC + IMSI Catcher Entegrasyonu
 
