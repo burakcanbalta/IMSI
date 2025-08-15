@@ -55,19 +55,19 @@ Türkiye’de 2022’de MIT tarafından çökertilen organize çete, yargı mens
 
 ## 4. MIT Çetesi Operasyonunun Teknik Analizi
 
-### 4.1 Saldırı Mimari Yapısı
+### Saldırı Mimari Yapısı
 
 1. **KEC cihazları:** NFC/APDU ile IMSI sızıntısı.
 2. **IMSI Catcher:** Sahte baz istasyonu ile cihazları zorla bağlatma.
 3. **RF Spektrum Analizi:** SDR ile gerçek zamanlı RF tarama.
 
-### 4.2 Kullanılan Açıklar
+### Kullanılan Açıklar
 
 - TS 13583 acil durum modu kötüye kullanımı.
 - Baseband backdoor’lar (Qualcomm, MediaTek).
 - KEC cihazı sürücü zafiyetleri (PC/SC imzasız komut işleme).
 
-### 4.3 Operasyon Adımları
+### Operasyon Adımları
 
 1. Hedef belirleme (yargı mensupları, kritik personel)
 2. RF ortam keşfi ve sinyal bastırma
@@ -78,9 +78,9 @@ Türkiye’de 2022’de MIT tarafından çökertilen organize çete, yargı mens
 ![thumbs_b_c_aeaa0a54d65dee1611ad55bb0be3fd67](https://github.com/user-attachments/assets/26b35600-1fc2-433c-b2cb-bae67dbae2d8)
 
 
-## 5. Yapısal ve Görsel Geliştirmeler
+##  Yapısal ve Görsel Geliştirmeler
 
-### 5.1 IMSI Catcher Sinyal Manipülasyonu ve KEC Veri Akışı
+### IMSI Catcher Sinyal Manipülasyonu ve KEC Veri Akışı
 
 ```
 Gerçek Baz İstasyonu  --->  RF Sinyal Bastırma
@@ -101,7 +101,7 @@ Gerçek Baz İstasyonu  --->  RF Sinyal Bastırma
 
 ![ana](https://github.com/user-attachments/assets/f43c7624-cf0b-4539-b771-c7a527143618)
 
-### 5.2 SDR Laboratuvar Simülasyonu
+### SDR Laboratuvar Simülasyonu
 
 - **Donanım:** HackRF One + LNA + Bandpass filtre (880-915 MHz)
 - **Sinyal Yakalama Komutları:**
@@ -117,9 +117,9 @@ grsm_livemon -f 942.6M -g 40 -v
 
 ---
 
-## 6. Teknik Detayları Derinleştirme
+## Teknik Detayları Derinleştirme
 
-### 6.1 Baseband İşlemci Açıkları ve APDU Exploit Mantığı
+### Baseband İşlemci Açıkları ve APDU Exploit Mantığı
 
 - Qualcomm & MediaTek CVE Detayları: CVE-2018-11279 ve benzer backdoor’lar
 - APDU Komut Setleri: KEC cihazları ile IMSI sızdırma adımları
@@ -127,79 +127,38 @@ grsm_livemon -f 942.6M -g 40 -v
 
 *Görsel Yer Tutucu:* `Baseband_APDU_Flow.png`
 
-### 6.2 Downgrade ve Ciphering Manipülasyonu
 
-- 2G/3G downgrade senaryoları ile A5/1 ve A5/2 şifreleme bypass adımları
-- Gerçek RF parametreleri ile örnek sinyal analizleri
+## Tespit ve Savunma Mekanizmaları
 
-
-### 6.3 KEC + IMSI Catcher Entegrasyonu
-
-- KEC cihazı APDU komutları ile IMSI toplar ve sahte baz ile konum takibi yapılır
-- Zafiyet zinciri görselleştirilmiş şekilde sunulmalı
-
-*Görsel Yer Tutucu:* `KEC_IMSI_Zinciri.png`
-
----
-
-## 7. Tespit ve Savunma Mekanizmaları
-
-### 7.1 Pasif Tespit
+### Pasif Tespit
 
 - Timing Advance analizi
 - MCC/MNC çakışması kontrolü
 - Ciphering indicator analizi (Android: ##4636## → "Ciphering: Off")
 
-### 7.2 Aktif Savunma
+### Aktif Savunma
 
 - SDR tabanlı spektrum taraması (GQRX + GNU Radio)
 - Secure Element sertifika zorunluluğu (TS 13584)
 - AIMSICD ve benzeri açık kaynaklı IMSI catcher detektörleri
 
-### 7.3 Politik Önlemler
+### Politik Önlemler
 
 - 2G şebekelerin kapatılması
 - Lawful Interception şifreleme standartlarının güncellenmesi (TS 101 671)
 
-*Görsel Yer Tutucu:* `Tespit_Savunma.png`
 
----
-
-## 8. Operasyonel Senaryolar ve MIT Çetesi Örneği
-
-- Hedef belirleme, RF keşfi, sahte baz kurulumu, IMSI toplama ve KEC ile veri sızıntısı
-- Her adımın detaylı akış diyagramları ile gösterimi
-
-*Görsel Yer Tutucu:* `MIT_Cete_Senaryo.png`
-
----
-
-## 9. Hukuki ve Etik Boyut
+## Hukuki ve Etik Boyut
 
 - **TCK 245:** Yetkisiz elektronik iletişim dinlemesi (3-7 yıl)
 - **BTK 2013/5:** RF spektrumunun izinsiz kullanımı (500.000 TL’ye kadar ceza)
 - **KVKK 12:** Kişisel verilerin güvenliğinin ihlali
+  
 
----
-
-## 10. Sonuç ve Öneriler
-
-- Kritik altyapılarda sürekli RF izleme
-- TS 13585 standardına "RF hardening" maddeleri eklenmeli
-- Açık kaynaklı SDR eğitimleri yaygınlaştırılmalı
-- 5G SA mimarisine geçiş ile 2G/3G’den kopuş sağlanmalı
-
-*Görsel Yer Tutucu:* `RF_Hardening_5G_Roadmap.png`
-
----
-
-## 11. Referanslar
+## Referanslar
 
 1. Karsten Nohl, GSM Security Research (2003-2022)
 2. TS 13583 / TS 13584 / TS 13585
 3. Qualcomm CVE-2018-11279
 4. Türkiye MIT operasyon raporları (kamuya açık özetler)
 5. AIMSICD ve GR-GSM dokümantasyonu
-
----
-
