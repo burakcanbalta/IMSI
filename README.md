@@ -12,7 +12,8 @@ IMSI (International Mobile Subscriber Identity) Catcher’lar, mobil ağlarda sa
 
 Türkiye’de 2022’de MIT tarafından çökertilen organize çete, yargı mensupları ve kritik kurum personeli hedef alınarak **IMSI sızıntısı ve konum takibi** yapmış, operasyonel olarak RF ve KEC cihazlarını entegre şekilde kullanmıştır.
 
-*Görsel önerisi:* `Sahte_vs_Gercek_Baz_Diyagram.png` — Sahte baz istasyonu + gerçek baz istasyonu RF akış diyagramı.
+<img width="833" height="522" alt="Ekran görüntüsü 2025-08-15 145719" src="https://github.com/user-attachments/assets/0f53b561-27d6-4bf2-b8b0-27a4e385b12a" />
+
 
 ---
 
